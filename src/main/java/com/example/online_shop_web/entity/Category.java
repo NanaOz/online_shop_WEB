@@ -17,6 +17,8 @@ public class Category {
     @Column(name = "name")
     private String name;
 
+    private String image;
+
     public Category() {
     }
 
@@ -36,11 +38,22 @@ public class Category {
         this.name = name;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
+
+
 }
