@@ -1,31 +1,31 @@
 <div th:fragment="header">
 <header>
-    <div>
-        <ul class="topmenu">
-            <li><a href="HomePage.html">Главная</a></li>
-            <li><a href="HomePage.html" class="down">Каталог</a>
-                <ul class="submenu">
-                    <li><a href="T-shirts.html">Футболки</a></li>
-                    <li><a href="TopsAndT-shirts.html">Топы и майки</a></li>
-                    <li><a href="Blouses.html">Блузы</a></li>
-                    <li><a href="Sweatshirts.html">Свитшоты</a></li>
-                    <li><a href="Dresses.html">Платья</a></li>
-                    <li><a href="Skirts.html">Юбки</a></li>
-                    <li><a href="Shorts.html">Шорты</a></li>
-                    <li><a href="Trousers.html">Брюки</a></li>
-                    <li><a href="Jeans.html">Джинсы</a></li>
-                    <li><a href="Overalls.html">Комбинезоны</a></li>
-                    <li><a href="Outerwear.html">Верхняя одежда</a></li>
-                </ul>
-            </li>
-            <li><a href="" class="down">Аккаунт</a>
-                <ul class="submenu">
-                    <li><a href="">Вход/Регистрация</a></li>
-                    <li><a href="">Корзина</a></li>
-                </ul>
-            </li>
-            <li><a href="">Контакты</a></li>
-        </ul>
+    <div class="sidenav">
+        <a href="HomePage.html">Главная</a>
+        <button class="dropdown-btn">Каталог
+            <i class="fa fa-caret-down">↓</i>
+        </button>
+        <div class="dropdown-container">
+            <a href="T-shirts.html">Футболки</a>
+            <a href="TopsAndT-shirts.html">Топы и майки</a>
+            <a href="Blouses.html">Блузы</a>
+            <a href="Sweatshirts.html">Свитшоты</a>
+            <a href="Dresses.html">Платья</a>
+            <a href="Skirts.html">Юбки</a>
+            <a href="Shorts.html">Шорты</a>
+            <a href="Trousers.html">Брюки</a>
+            <a href="Jeans.html">Джинсы</a>
+            <a href="Overalls.html">Комбинезоны</a>
+            <a href="Outerwear.html">Верхняя одежда</a>
+        </div>
+        <button class="dropdown-btn">Аккаунт
+            <i class="fa fa-caret-down">↓</i>
+        </button>
+        <div class="dropdown-container">
+            <a href="T-shirts.html">Вход/Регистрация</a>
+            <a href="TopsAndT-shirts.html">Корзина</a>
+        </div>
+        <a href="">Контакты</a>
     </div>
 </header>
 </div>

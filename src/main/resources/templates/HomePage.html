@@ -6,100 +6,28 @@
     <title>Home page</title>
 </head>
 <body>
-<!--<header th:insert="block/head :: head"></header>-->
-<!--поменять шапку магазина (ЛК, вход/регистрация, значек корзины) и вынести шапку в отдельный html -->
-<!--добавить товары через бд (картина, название, цена) + кнопка добавления в корзину)-->
-<!--ЛК (отображение корзины, профиль итд)-->
-
-<!--<div>-->
-<!--    <ul class="topmenu">-->
-<!--        <li><a href="HomePage.html">Главная</a></li>-->
-<!--        <li><a href="HomePage.html" class="down">Каталог</a>-->
-<!--            <ul class="submenu">-->
-<!--                <li><a href="T-shirts.html">Футболки</a></li>-->
-<!--                <li><a href="TopsAndT-shirts.html">Топы и майки</a></li>-->
-<!--                <li><a href="Blouses.html">Блузы</a></li>-->
-<!--                <li><a href="Sweatshirts.html">Свитшоты</a></li>-->
-<!--                <li><a href="Dresses.html">Платья</a></li>-->
-<!--                <li><a href="Skirts.html">Юбки</a></li>-->
-<!--                <li><a href="Shorts.html">Шорты</a></li>-->
-<!--                <li><a href="Trousers.html">Брюки</a></li>-->
-<!--                <li><a href="Jeans.html">Джинсы</a></li>-->
-<!--                <li><a href="Overalls.html">Комбинезоны</a></li>-->
-<!--                <li><a href="Outerwear.html">Верхняя одежда</a></li>-->
-<!--            </ul>-->
-<!--        </li>-->
-<!--        <li><a href="" class="down">Аккаунт</a>-->
-<!--            <ul class="submenu">-->
-<!--                <li><a href="">Вход/Регистрация</a></li>-->
-<!--                <li><a href="">Корзина</a></li>-->
-<!--            </ul>-->
-<!--        </li>-->
-<!--        <li><a href="">Контакты</a></li>-->
-<!--    </ul>-->
-<!--</div>-->
 
 <header th:insert="header :: header"></header>
-<div class="card-list" th:each="element : ${map}">
-    <div>
-        <p th:text="${element.key.name}" ></p>
-    </div>
-    <div class="card">
-        <div class="card-image" th:each="prod : ${element.value}">
-            <img th:src="${prod.image}" alt="">
-            <div th:text="${prod.name}"></div>
-            <div>
-                <span th:text="${prod.price}"></span>
-                <span th:unless="${prod.oldPrice} == 0">
-                    <span th:text="${prod.oldPrice}"></span>
+
+<div class="products">
+    <div class="newproducts" th:each="element : ${map}">
+        <div id="newproducts_caption">
+            <p th:text="${element.key.name}"></p>
+        </div>
+        <div class="card">
+            <div class="product" th:each="prod : ${element.value}">
+                <img class="foto" th:src="${prod.image}" alt="">
+                <div class="product_name" th:text="${prod.name}"></div>
+                <div class="product_price">
+                    ₽ <span th:text="${prod.price}"></span>
+                    <span th:unless="${prod.oldPrice} == 0">
+                    ₽ <span th:text="${prod.oldPrice}"></span>
                 </span>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
-
-<!--<ul class="card-list">-->
-<!--    <li class="card">-->
-<!--        <a class="card-image" href="T-shirts.html" target="_blank"-->
-<!--           style="background-image: url(https://res.cloudinary.com/teepublic/image/private/s&#45;&#45;Fs0TdNMz&#45;&#45;/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_423/c_crop,g_north_west,h_626,w_470,x_-23,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-418,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1586217806/production/designs/8920391_0.jpg);"-->
-<!--           data-image-full="https://res.cloudinary.com/teepublic/image/private/s&#45;&#45;Fs0TdNMz&#45;&#45;/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_423/c_crop,g_north_west,h_626,w_470,x_-23,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-418,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1586217806/production/designs/8920391_0.jpg">-->
-<!--            <img src="https://res.cloudinary.com/teepublic/image/private/s&#45;&#45;Fs0TdNMz&#45;&#45;/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_423/c_crop,g_north_west,h_626,w_470,x_-23,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-418,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1586217806/production/designs/8920391_0.jpg"-->
-<!--                 alt="The Beautiful Outerwear"/>-->
-<!--        </a>-->
-
-<!--        <a class="card-description" href="T-shirts.html" target="_blank">-->
-<!--            <h2>Outerwear</h2>-->
-<!--        </a>-->
-<!--    </li>-->
-
-<!--    <li class="card">-->
-<!--        <a class="card-image" href="TopsAndT-shirts.html" target="_blank"-->
-<!--           style="background-image: url(https://cdn.cliqueinc.com/posts/286154/loose-trouser-trend-286154-1585668553765-main.700x0c.jpg);"-->
-<!--           data-image-full="https://cdn.cliqueinc.com/posts/286154/loose-trouser-trend-286154-1585668553765-main.700x0c.jpg">-->
-<!--            <img src="https://cdn.cliqueinc.com/posts/286154/loose-trouser-trend-286154-1585668553765-main.700x0c.jpg"-->
-<!--                 alt="The Beautiful Pants"/>-->
-<!--        </a>-->
-
-<!--        <a class="card-description" href="TopsAndT-shirts.html" target="_blank">-->
-<!--            <h2>Pants</h2>-->
-<!--        </a>-->
-<!--    </li>-->
-
-<!--    <li class="card">-->
-<!--        <a class="card-image" href="Blouses.html" target="_blank"-->
-<!--           style="background-image: url(https://balenciaga.dam.kering.com/m/5b337a703f818263/Medium-529192310B21077_I.jpg?v=3);"-->
-<!--           data-image-full="https://balenciaga.dam.kering.com/m/5b337a703f818263/Medium-529192310B21077_I.jpg?v=3">-->
-<!--            <img src="https://balenciaga.dam.kering.com/m/5b337a703f818263/Medium-529192310B21077_I.jpg?v=3"-->
-<!--                 alt="The Beautiful Headdress"/>-->
-<!--        </a>-->
-
-<!--        <a class="card-description" href="Blouses.html" target="_blank">-->
-<!--            <h2>Headdress</h2>-->
-<!--        </a>-->
-<!--    </li>-->
-<!--</ul>-->
-
 
 <script src="/JS.js/"></script>
 </body>
