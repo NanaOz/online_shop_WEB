@@ -25,11 +25,11 @@ public class CategoryController {
         this.productRepository = productRepository;
     }
 
-//    @GetMapping("/homepage")
-//    public String showHomePage(Model model) {
-//        model.addAttribute("categories", categoryRepository.findAll());
-//        return "HomePage";
-//    }
+    @GetMapping("/homepage")
+    public String showHomePage(Model model) {
+        model.addAttribute("categories", categoryRepository.findAll());
+        return "Home";
+    }
 
     @GetMapping("/catalog/{id}")
     public String showInfoForm(@PathVariable("id") long id, Model model) {
@@ -44,6 +44,6 @@ public class CategoryController {
         Map<Category, List<Product>> map = new HashMap<>();
         category.forEach(type -> map.put(type, productRepository.findByCategory(type)));
         model.addAttribute("map", map);
-        return "HomePage";
+        return "CategoryPage";
     }
 }
