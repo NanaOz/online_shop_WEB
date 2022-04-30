@@ -25,17 +25,14 @@ public class CategoryController {
         this.productRepository = productRepository;
     }
 
-    @GetMapping("/homepage")
-    public String showHomePage(Model model) {
-        model.addAttribute("categories", categoryRepository.findAll());
+    @GetMapping("/home")
+    public String showHomePage() {
         return "Home";
     }
 
-    @GetMapping("/catalog/{id}")
-    public String showInfoForm(@PathVariable("id") long id, Model model) {
-        Category category = categoryRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-        model.addAttribute("category", category);
-        return "";
+    @GetMapping("/contact")
+    public String showContacts() {
+        return "Contacts";
     }
 
     @GetMapping("/show")
@@ -45,5 +42,12 @@ public class CategoryController {
         category.forEach(type -> map.put(type, productRepository.findByCategory(type)));
         model.addAttribute("map", map);
         return "CategoryPage";
+    }
+
+    @GetMapping("/catalog/{id}")
+    public String showInfoForm(@PathVariable("id") long id, Model model) {
+        Category category = categoryRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        model.addAttribute("category", category);
+        return "";
     }
 }

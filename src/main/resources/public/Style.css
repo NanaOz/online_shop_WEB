@@ -13,7 +13,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -90,17 +90,17 @@ body {
 }
 
 .instagram a:hover {
-    background: #3f729b;
+    background: #ff2abd;
     color: #fff;
 }
 
 .vk a:hover {
-    background: #5d84ae;
+    background: #415e80;
     color: #fff;
 }
 
 .telegram a:hover {
-    background: #249bd7;
+    background: #0fb1ff;
     color: #fff;
 }
 
@@ -111,12 +111,13 @@ head, body {
 }
 
 .products {
-    width: 900px;
-    min-height: 1643px;
-    float: right;
-    padding-right: 220px;
-    background-color: rgb(255, 255, 255);
-    margin-top: 5px;
+    min-height: 11200px;
+    padding-right: 119px;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 80px;
+    margin-left: 200px;
+    width: 86.85%;
 }
 
 .newproducts {
@@ -214,7 +215,7 @@ head, body {
 .foto {
     width: 260px;
     height: 290px;
-    margin-left: 5px;
+    margin-left: 40px;
     margin-top: 5px;
 }
 
@@ -224,7 +225,7 @@ head, body {
 }
 
 .product_name {
-    width: 155px;
+    width: 250px;
     float: left;
     font-size: 14px;
     font-family: "Roboto2", sans-serif;
@@ -251,41 +252,6 @@ head, body {
     color: #bf11da;
 }
 
-/*#brand*/
-/*{*/
-/*    width: 100%;*/
-/*    height: 163px;*/
-/*    background-color: #ffffff;*/
-/*    float: left;*/
-/*    !*position: absolute;*!*/
-/*    !*top: 1650px;*!*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
-/*#brand img*/
-/*{*/
-/*    height: 100%;*/
-/*}*/
-/*#instagram*/
-/*{*/
-/*    width: 100%;*/
-/*    height: 107px;*/
-/*    background-color: #eaeaea;*/
-/*    !*position: absolute;*!*/
-/*    !*top: 1813px;*!*/
-/*    font-family: Roboto2, sans-serif;*/
-/*    color:  #333333;*/
-/*    font-size: 22px;*/
-/*    font-weight: 900;*/
-/*    text-align: center;*/
-/*    float: left;*/
-/*}*/
-/*#instagram p*/
-/*{*/
-/*    padding-top: 30px;*/
-/*}*/
 
 #foto {
     width: 100%;
@@ -524,4 +490,20 @@ img {
     -webkit-animation-duration: 4s;
     animation-name: fade;
     animation-duration: 4s;
+}
+
+/*КОНТАКТЫ*/
+.our_contacts{
+    position: center;
+    margin-top: 50px;
+}
+
+.address{
+    margin-left: 500px;
+}
+
+.contacts{
+    color: white;
+    font-size: 18px;
+    margin-left: 500px;
 }

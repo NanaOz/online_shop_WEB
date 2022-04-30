@@ -9,7 +9,7 @@
 
 <header th:insert="header :: header"></header>
 
-<div class="products">
+<div class="products" id="category">
     <div class="newproducts" th:each="element : ${map}">
         <div id="newproducts_caption">
             <p th:text="${element.key.name}"></p>
