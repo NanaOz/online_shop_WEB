@@ -147,6 +147,7 @@ head, body {
     margin-top: -20px;
     margin-bottom: 20px;
     float: left;
+    /*background-color: rgba(255, 15, 143, 0.8);*/
 }
 
 #newproducts_caption p {
